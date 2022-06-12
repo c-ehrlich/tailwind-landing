@@ -5,6 +5,9 @@ import Link from 'next/link';
 
 import logo from '../public/img/logo.svg';
 import illustrationIntro from '../public/img/illustration-intro.svg';
+import avatarAnisha from '../public/img/avatar-anisha.png';
+import avatarRichard from '../public/img/avatar-richard.png';
+import avatarAli from '../public/img/avatar-ali.png';
 
 const Home: NextPage = () => {
   return (
@@ -47,7 +50,7 @@ const Home: NextPage = () => {
       </nav>
 
       {/* Hero section */}
-      <section className='hero'>
+      <section id='hero'>
         <div className='container flex flex-col-reverse md:flex-row items-center px-6 mx-auto mt-10 space-y-0 md:space-y-0'>
           {/* Left item */}
           <div className='flex flex-col mb-32 space-y-12 md:w-1/2'>
@@ -75,7 +78,7 @@ const Home: NextPage = () => {
       </section>
 
       {/* Features */}
-      <section className='features'>
+      <section id='features'>
         <div className='container flex flex-col space px-4 mx-auto mt-10 space-y-12 md:space-y-0 md:flex-row'>
           {/* What's different */}
           <div className='flex flex-col space-y-12 md:w-1/2'>
@@ -160,6 +163,62 @@ const Home: NextPage = () => {
                 </p>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <section id='testimonials'>
+        <div className='max-w-6xl px-5 mx-auto mt-32 text-center'>
+          <h2 className='text-4xl font-bold text-center'>
+            What&apos;s different about Manage?
+          </h2>
+          <div className='flex flex-col mt-24 md:flex-row md:space-x-6 items-center'>
+            {/* Testimonial 1 */}
+            <div className='flex flex-col items-center p-6 space-y-6 rounded-lg bg-veryLightGray sm:w-2/3 md:w-1/3'>
+              <div className='w-16 -mt-14'>
+                <Image src={avatarAnisha} alt='Anisha' />
+              </div>
+              <h5 className='text-lg-font-bold'>Anisha Li</h5>
+              <p className='text-sm text-darkGrayishBlue'>
+                &quot;Manage has supercharged our team&apos;s workflow. The
+                ability to maintain visibility on larger milestones at all times
+                keeps everyone motivated.&quot;
+              </p>
+            </div>
+            {/* Testimonial 2 */}
+            <div className='flex mt-16 md:mt-0 flex-col items-center p-6 space-y-6 rounded-lg bg-veryLightGray sm:w-2/3 md:w-1/3'>
+              <div className='w-16 -mt-14'>
+                <Image src={avatarAli} alt='Ali' />
+              </div>
+              <h5 className='text-lg-font-bold'>Ali Bravo</h5>
+              <p className='text-sm text-darkGrayishBlue'>
+                &quot;We have been able to cancel so many other subscriptions
+                since using Manage. There is no more cross-channel confusion and
+                everyone is so much more focused.&quot;
+              </p>
+            </div>
+            {/* Testimonial 3  */}
+            <div className='flex mt-16 md:mt-0 flex-col items-center p-6 space-y-6 rounded-lg bg-veryLightGray sm:w-2/3 md:w-1/3'>
+              <div className='w-16 -mt-14'>
+                <Image src={avatarRichard} alt='Anisha' />
+              </div>
+              <h5 className='text-lg-font-bold'>Richard Watts</h5>
+              <p className='text-sm text-darkGrayishBlue'>
+                &quot;Manage is the best thing that ever happened to our team.
+                We work faster, communicate more effectively, and have been able
+                to meet target after target.&quot;
+              </p>
+            </div>
+          </div>
+          {/* Button */}
+          <div className='my-16'>
+            <a
+              href='#'
+              className='p-3 px-6 pt-2 text-white bg-brightRed rounded-full baseline hover:bg-brightRedLight'
+            >
+              Get Started
+            </a>
           </div>
         </div>
       </section>
