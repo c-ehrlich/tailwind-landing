@@ -14,8 +14,14 @@ import iconYoutube from '../public/img/icon-youtube.svg';
 import illustrationIntro from '../public/img/illustration-intro.svg';
 import logo from '../public/img/logo.svg';
 import logoWhite from '../public/img/logo-white.svg';
+import { useState } from 'react';
 
 const Home: NextPage = () => {
+  const [menuOpen, setMenuOpen] = useState<boolean>(false);
+  function toggleMenuOpen() {
+    setMenuOpen((o) => !o);
+  }
+
   return (
     <>
       <Head>
@@ -52,6 +58,41 @@ const Home: NextPage = () => {
           >
             Get Started
           </a>
+
+          {/* Hamburger Icon */}
+          <button
+            id='menu-btn'
+            className={`block hamburger md:hidden focus:outline-none ${menuOpen && 'open'}`}
+            onClick={toggleMenuOpen}
+          >
+            <span className='hamburger-top'></span>
+            <span className='hamburger-middle'></span>
+            <span className='hamburger-bottom'></span>
+          </button>
+        </div>
+
+        {/* Mobile Menu */}
+        <div className='md:hidden'>
+          <div
+            id='menu'
+            className={`absolute ${menuOpen ? 'flex' : 'hidden'} flex-col items-center z-10 self-end py-8 mt-2 space-y-6 font-bold bg-white sm:w-auto sm:self-center left-6 right-6 drop-shadow-md`}
+          >
+            <Link href='#'>
+              <a>Pricing</a>
+            </Link>
+            <Link href='#'>
+              <a>Product</a>
+            </Link>
+            <Link href='#'>
+              <a>About Us</a>
+            </Link>
+            <Link href='#'>
+              <a>Careers</a>
+            </Link>
+            <Link href='#'>
+              <a>Community</a>
+            </Link>
+          </div>
         </div>
       </nav>
 
@@ -251,7 +292,9 @@ const Home: NextPage = () => {
         <div className='container flex flex-col-reverse justify-between px-6 py-10 mx-auto space-y-8 md:flex-row md:space-y-0'>
           {/* Logo and Social Links */}
           <div className='flex flex-col-reverse items-center justify-between space-y-12 md:flex-col md:space-y-0 md:items-start'>
-            <div className="mx-auto my-6 text-center text-white md:hidden">Copyright &copy; 2022, All Rights Reserved</div>
+            <div className='mx-auto my-6 text-center text-white md:hidden'>
+              Copyright &copy; 2022, All Rights Reserved
+            </div>
             <div>
               <Image src={logoWhite} alt='logo white' />
             </div>
