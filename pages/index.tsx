@@ -3,11 +3,17 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 
-import logo from '../public/img/logo.svg';
-import illustrationIntro from '../public/img/illustration-intro.svg';
 import avatarAnisha from '../public/img/avatar-anisha.png';
 import avatarRichard from '../public/img/avatar-richard.png';
 import avatarAli from '../public/img/avatar-ali.png';
+import iconFacebook from '../public/img/icon-facebook.svg';
+import iconInstagram from '../public/img/icon-instagram.svg';
+import iconPinterest from '../public/img/icon-pinterest.svg';
+import iconTwitter from '../public/img/icon-twitter.svg';
+import iconYoutube from '../public/img/icon-youtube.svg';
+import illustrationIntro from '../public/img/illustration-intro.svg';
+import logo from '../public/img/logo.svg';
+import logoWhite from '../public/img/logo-white.svg';
 
 const Home: NextPage = () => {
   return (
@@ -219,6 +225,112 @@ const Home: NextPage = () => {
             >
               Get Started
             </a>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA section */}
+      <section id='cta' className='bg-brightRed'>
+        <div className='container flex flex-col items-center justify-between px-6 py-24 mx-auto space-y-12 md:py-12 md:flex-row md:space-y-0'>
+          <h2 className='text-5lx font-bold leading-tight text-center text-white md:text-4xl md:max-w-xl md:text-left'>
+            Simplify how your team works today
+          </h2>
+          <div>
+            <a
+              href='#'
+              className='p-3 px-6 pt-2 text-brightRed bg-white rounded-full shadow-2xl baseline hover:bg-red-100'
+            >
+              Get Started
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <section id='footer' className='bg-veryDarkBlue'>
+        <div className='container flex flex-col-reverse justify-between px-6 py-10 mx-auto space-y-8 md:flex-row md:space-y-0'>
+          {/* Logo and Social Links */}
+          <div className='flex flex-col-reverse items-center justify-between space-y-12 md:flex-col md:space-y-0 md:items-start'>
+            <div className="mx-auto my-6 text-center text-white md:hidden">Copyright &copy; 2022, All Rights Reserved</div>
+            <div>
+              <Image src={logoWhite} alt='logo white' />
+            </div>
+            <div className='flex justify-center space-x-4'>
+              <Link href='#'>
+                <a>
+                  <Image src={iconFacebook} alt='Facebook' />
+                </a>
+              </Link>
+              <Link href='#'>
+                <a>
+                  <Image src={iconInstagram} alt='Instagram' />
+                </a>
+              </Link>
+              <Link href='#'>
+                <a>
+                  <Image src={iconTwitter} alt='Twitter' />
+                </a>
+              </Link>
+              <Link href='#'>
+                <a>
+                  <Image src={iconPinterest} alt='Pinterest' />
+                </a>
+              </Link>
+              <Link href='#'>
+                <a>
+                  <Image src={iconYoutube} alt='Youtube' />
+                </a>
+              </Link>
+            </div>
+          </div>
+          {/* List */}
+          <div className='flex justify-around space-x-32'>
+            <div className='flex flex-col space-y-3 text-white'>
+              <Link href='#'>
+                <a className='hover:text-brightRed'>Home</a>
+              </Link>
+              <Link href='#'>
+                <a className='hover:text-brightRed'>Pricing</a>
+              </Link>
+              <Link href='#'>
+                <a className='hover:text-brightRed'>Products</a>
+              </Link>
+              <Link href='#'>
+                <a className='hover:text-brightRed'>About</a>
+              </Link>
+            </div>
+            <div className='flex flex-col space-y-3 text-white'>
+              <Link href='#'>
+                <a className='hover:text-brightRed'>Careers</a>
+              </Link>
+              <Link href='#'>
+                <a className='hover:text-brightRed'>Community</a>
+              </Link>
+              <Link href='#'>
+                <a className='hover:text-brightRed'>Privacy</a>
+              </Link>
+            </div>
+          </div>
+
+          {/* Input */}
+          <div className='flex flex-col justify-between'>
+            <form action='submit'>
+              <div className='flex space-x-3'>
+                <input
+                  placeholder='Updates in your inbox'
+                  type='text'
+                  className='flex-1 px-4 rounded-full focus:outline-none'
+                />
+                <button className='px-6 py-2 text-white rounded-full bg-brightRed hover:bg-brightRedLight focus:outline-none'>
+                  Go
+                </button>
+              </div>
+            </form>
+
+            {/* Copyright */}
+            <div className='hidden text-white md:block'>
+              Copyright &copy; 2022, All Rights Reserved.
+            </div>
           </div>
         </div>
       </section>
